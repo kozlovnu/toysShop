@@ -1,0 +1,4 @@
+id; name; amount; dropout frequency
+1; barbi; 100; 30.0%; 
+1; police; 50; 50.0%; 
+1; ken; 30; 30.0%; 
