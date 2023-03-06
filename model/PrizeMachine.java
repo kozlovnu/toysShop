@@ -7,13 +7,21 @@ import java.util.Scanner;
 
 import finalTask.util.CsvFileRecorder;
 
-public class Machine {
+public class PrizeMachine {
     private List<Prize> prizes;
 
-    public Machine() {
+    public PrizeMachine() {
         this.prizes = new ArrayList<>();
     }
 
+    public List<Prize> addToysList(List <Prize> list){
+        for (Prize prize : list){
+            prizes.add(prize);
+        }
+        return prizes;
+    }
+
+    // Это переехало в service
     public List<Prize> loadToys() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("How many toys you want to load?");
@@ -36,7 +44,7 @@ public class Machine {
         recorder.saveToFile(prizes);
         return prizes;
     }
-    
+    // И это тоже переехало
     public List<Prize> getPrize(String toyName){
         // Scanner iscanner = new Scanner(System.in);
         System.out.println("Chose the prize from list below:");

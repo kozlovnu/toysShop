@@ -1,4 +1,3 @@
 id; name; amount; dropout frequency
-1; barbi; 100; 30.0%; 
-1; police; 50; 50.0%; 
-1; ken; 30; 30.0%; 
+1; police car; 100; 90.0%
+1; military car; 80; 70.0%

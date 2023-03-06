@@ -25,7 +25,7 @@ public class CsvDataReader extends DataReader<Prize> {
                         firstLine = false;
                         continue;
                     }
-                    String[] str = line.split("; | |%");
+                    String[] str = line.split("; |%");
                     prizes.add(new Prize(Integer.parseInt(str[0]), str[1], Integer.parseInt(str[2]),
                             Float.parseFloat(str[3])));
 
