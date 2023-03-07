@@ -7,7 +7,6 @@ import finalTask.model.PrizeMachineService;
 public class Controller {
 
     public void start() {
-        String[] commands = { "start", "load", "change", "exit" };
         PrizeMachineService service = new PrizeMachineService();
         System.out.println("Welcome to Toy's Store Prizemachine!");
         System.out.println(
@@ -20,6 +19,7 @@ public class Controller {
                 System.out.println("Thank you for choosing our store!");
                 break;
             case "load":
+                service.loadToys(scanner);
                 System.out.println("Toys successfully loaded to machine!");
                 break;
             case "change":
@@ -27,6 +27,7 @@ public class Controller {
                 System.out.println("Dropout frequency was changed");
 
             default:
+                scanner.close();
                 break;
         }
     }

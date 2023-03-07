@@ -1,7 +1,8 @@
 id; name; amount; dropout frequency
 1; car; 4332; 90.0%
-2; police car; 100; 70.0%
+2; police car; 99; 70.0%
 3; cd; 2; 23.0%
 4; doll; 90; 80.0%
 5; chess; 580; 70.0%
 6; emergency car; 500; 60.0%
+7; uno; 299; 80.0%

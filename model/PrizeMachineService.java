@@ -16,26 +16,6 @@ public class PrizeMachineService {
         this.prizeList = new ArrayList<>();
     }
 
-    // public List<Prize> addToy(Scanner iScanner) {
-    //     prizeList = new CsvDataReader().readFromFile("finalTask/data/data.csv");
-    //     int id = 1;
-    //     if (!prizeList.isEmpty()) {
-    //         id = prizeList.get(prizeList.size() - 1).getId() + 1;
-    //     }
-    //     System.out.println("Enter name of toy:");
-    //     iScanner.nextLine();
-    //     String name = iScanner.nextLine();
-
-    //     System.out.println("Enter amount of toys:");
-    //     int amount = iScanner.nextInt();
-
-    //     System.out.println("Enter toys dropout frequency:");
-    //     float dropoutFrequency = iScanner.nextFloat();
-    //     prizeList.add(new Prize(id, name, amount, dropoutFrequency));
-
-    //     return prizeList;
-    // }
-
     public List<Prize> loadToys(Scanner iScanner) {
         prizeList = new CsvDataReader().readFromFile("finalTask/data/data.csv");
         int id = 0;
