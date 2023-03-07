@@ -1,13 +1,13 @@
-package finalTask.model;
+package toysShop.model;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
 
-import finalTask.util.CsvDataReader;
-import finalTask.util.CsvFileRecorder;
-import finalTask.util.TxtlogFileRecorder;
+import toysShop.util.CsvDataReader;
+import toysShop.util.CsvFileRecorder;
+import toysShop.util.TxtlogFileRecorder;
 
 public class PrizeMachineService {
     private List<Prize> prizeList;
@@ -17,7 +17,7 @@ public class PrizeMachineService {
     }
 
     public List<Prize> loadToys(Scanner iScanner) {
-        prizeList = new CsvDataReader().readFromFile("finalTask/data/data.csv");
+        prizeList = new CsvDataReader().readFromFile("toysShop/data/data.csv");
         int id = 0;
         if (!prizeList.isEmpty()) {
             id = prizeList.get(prizeList.size() - 1).getId();
@@ -61,7 +61,7 @@ public class PrizeMachineService {
     }
 
     public List<Prize> getPrize(Scanner iScanner) {
-        List<Prize> prizeList = new CsvDataReader().readFromFile("finalTask/data/data.csv");
+        List<Prize> prizeList = new CsvDataReader().readFromFile("toysShop/data/data.csv");
         System.out.println("Chose the prize from list below:");
         showPrizesList(prizeList);
         // iScanner.nextLine();
@@ -84,7 +84,7 @@ public class PrizeMachineService {
     }
 
     public List<Prize> changeDropoutFrequency(Scanner iScanner){
-        prizeList = new CsvDataReader().readFromFile("finalTask/data/data.csv");
+        prizeList = new CsvDataReader().readFromFile("toysShop/data/data.csv");
         if (!prizeList.isEmpty()) {
             System.out.println("Enter toy name to change dropout frequency: ");
             String name = iScanner.nextLine();

@@ -1,4 +1,4 @@
-package finalTask.model;
+package toysShop.model;
 
 public class Prize {
     private int id;

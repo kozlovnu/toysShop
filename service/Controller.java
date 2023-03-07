@@ -1,8 +1,8 @@
-package finalTask.service;
+package toysShop.service;
 
 import java.util.Scanner;
 
-import finalTask.model.PrizeMachineService;
+import toysShop.model.PrizeMachineService;
 
 public class Controller {
 

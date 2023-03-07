@@ -1,4 +1,4 @@
-package finalTask.util;
+package toysShop.util;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import finalTask.model.Prize;
+import toysShop.model.Prize;
 
 public class CsvDataReader extends DataReader<Prize> {
 

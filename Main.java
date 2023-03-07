@@ -1,6 +1,6 @@
-package finalTask;
+package toysShop;
 
-import finalTask.service.Controller;
+import toysShop.service.Controller;
 ;
 
 public class Main {

@@ -1,4 +1,4 @@
-package finalTask.util;
+package toysShop.util;
 
 public abstract class FileRecorder <T> {
     public abstract void saveToFile(T value);

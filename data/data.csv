@@ -6,3 +6,4 @@ id; name; amount; dropout frequency
 5; chess; 580; 70.0%
 6; emergency car; 500; 60.0%
 7; uno; 299; 80.0%
+8; tennis; 50; 20.0%
