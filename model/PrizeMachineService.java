@@ -1,13 +1,10 @@
-package finalTask.service;
+package finalTask.model;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
 
-import Homework.hw002.TxtFileRecorder;
-import finalTask.model.Prize;
 import finalTask.util.CsvDataReader;
 import finalTask.util.CsvFileRecorder;
 import finalTask.util.TxtlogFileRecorder;
@@ -77,6 +74,7 @@ public class PrizeMachineService {
             prizeList.add(new Prize(id, name, amount, dropoutFrequency));
             
         }
+        sortList(prizeList);
         CsvFileRecorder recorder = new CsvFileRecorder();
         recorder.saveToFile(prizeList);
         return prizeList;
@@ -91,7 +89,6 @@ public class PrizeMachineService {
         for (Prize toy : prizeList) {
             if (name.equals(toy.getName())) {
                 int chance = new Random().nextInt(1, 101);
-                System.out.println(chance);
                 if (toy.getDropoutFrequency() >= chance) {
                     System.out.printf("Congratulations! You won %s\n", toy.getName());
                     toy.setAmount(toy.getAmount() - 1);
@@ -101,6 +98,7 @@ public class PrizeMachineService {
                 }
             }
         }
+        sortList(prizeList);
         new CsvFileRecorder().saveToFile(prizeList);
         return prizeList;
     }
@@ -127,11 +125,26 @@ public class PrizeMachineService {
         return prizeList;
     }
 
+    public List<Prize> sortList(List<Prize> list){
+        // Prize maxId = list.get(0);
+        for (int i = 0; i < list.size(); i++){
+            for (int j = 0; j < list.size()-1; j++){
+                if (list.get(j).getId() > list.get(j+1).getId()){
+                    Prize temp = list.get(j);
+                    list.set(j, list.get(j+1));
+                    list.set(j+1, temp);
+                }
+            }
+        }
+        return list;
+    }
+
+    // Перенести во viewer
     public void showPrizesList(List<Prize> prizes) {
         for (Prize toy : prizes) {
-            System.out.println(toy.getName()+ "\n" 
-                                + toy.getAmount() + "\n"
-                                + toy.getDropoutFrequency() + "\n");
+            System.out.println("toy = " + toy.getName() 
+                                + ", amout = " + toy.getAmount()
+                                + ", dropout freqency = " + toy.getDropoutFrequency());
         }
 
     }

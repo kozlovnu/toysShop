@@ -1,5 +1,6 @@
 package finalTask.util;
 
-abstract class FileRecorder <T> {
-    abstract void saveToFile(T value);
+public abstract class FileRecorder <T> {
+    public abstract void saveToFile(T value);
+    public abstract void saveLog(String action, T val);
 }

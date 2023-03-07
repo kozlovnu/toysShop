@@ -27,4 +27,10 @@ public class CsvFileRecorder extends FileRecorder <List<Prize>> {
         }
     }
 
+    @Override
+    public void saveLog(String action, List<Prize> val) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'saveLog'");
+    }
+
 }

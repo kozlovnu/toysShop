@@ -32,6 +32,28 @@ public class TxtlogFileRecorder extends FileRecorder <Prize> {
         }        
     }
 
+    @Override
+    public void saveLog(String action, Prize prize) {
+        DateFormat dateF = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+        Calendar cal = Calendar.getInstance();
+        try (Writer writer = new FileWriter("finalTask/data/log.txt", true)) {
+                writer.write(dateF.format(cal.getTime()) + "; " +
+                        action + "; " +
+                        prize.getId() + "; " +
+                        prize.getName() + "; " +
+                        prize.getAmount() + "; " +
+                        prize.getDropoutFrequency() + "%");
+                
+                writer.write("\n");
+            
+            writer.close();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }        
+        throw new UnsupportedOperationException("Unimplemented method 'saveLog'");
+    }
+
 
     
 }
