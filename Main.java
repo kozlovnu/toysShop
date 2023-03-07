@@ -12,7 +12,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        PrizeMachine machine = new PrizeMachine();
+        // PrizeMachine machine = new PrizeMachine();
         // machine.loadToys();
         // machine.showPrizesList(machine.loadToys());
         // String toyName = scanner.nextLine();
@@ -20,8 +20,9 @@ public class Main {
         // machine.showPrizesList(machine.getPrizes());
 
         PrizeMachineService service = new PrizeMachineService();
-        service.loadToys(scanner);
-        service.addToy(scanner);
+        // service.loadToys(scanner);
+        // service.changeDropoutFrequency(scanner);
+        // service.addToy(scanner);
         service.getPrize(scanner);
 
         // CsvDataReader reader = new CsvDataReader();

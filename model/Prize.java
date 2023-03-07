@@ -1,13 +1,13 @@
 package finalTask.model;
 
 public class Prize {
-    private int id = 0;
+    private int id;
     private String name;
     private int amount;
     private float dropoutFrequency;
 
     public Prize(int id, String name, int amount, float dropoutFrequency) {
-        this.id++;
+        this.id = id;
         this.name = name;
         this.amount = amount;
         this.dropoutFrequency = dropoutFrequency;
@@ -48,5 +48,6 @@ public class Prize {
                 "\namount: " + amount +
                 "\ndropoutFrequency: " + dropoutFrequency;
     }
+
 
 }
